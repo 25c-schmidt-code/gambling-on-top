@@ -1,2 +1,2 @@
 # gambling-on-top
-ja
+nemtom teso majd vmit kitalalok
