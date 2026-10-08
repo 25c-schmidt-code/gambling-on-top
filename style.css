@@ -1,16 +1,569 @@
-.custom-carousel-img {
-    height: 400px;
-    object-fit: cover; }
-body{
-background-color:#93D786
-
-
+body {
+    margin: 0;
+    background:
+        radial-gradient(ellipse at 50% 0, rgba(116, 143, 80, 0.2), transparent 55%),
+        repeating-linear-gradient(135deg, transparent 0 44px, rgba(255, 255, 255, 0.018) 44px 46px),
+        #19211d;
+    color: #f1eee2;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-h1
-{
+    
+
+
+.page-choice,
+.slide-choice {
+    position: absolute;
+    left: -9999px;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 24px;
+    background: rgba(12, 17, 15, 0.88);
+    color: #f1eee2;
+}
+
+.brand {
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.right,
+.profile-credit {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.profile-credit img,
+.player-picture {
+    width: 44px;
+    height: 44px;
+    border: 2px solid #c5a55a;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-credit p {
+    margin: 0;
+}
+
+.credit-button {
+    padding: 7px 10px;
+    border: 1px solid #a68a50;
+    border-radius: 4px;
+    background: #80652e;
+    color: white;
+    cursor: pointer;
+    font: inherit;
+}
+
+.credit-button:hover {
+    background: #987c3d;
+}
+
+.menu {
+    position: relative;
+}
+
+.menu summary {
+    display: grid;
+    width: 38px;
+    height: 34px;
+    align-content: center;
+    justify-items: center;
+    gap: 5px;
+    border: 1px solid #a68a50;
+    border-radius: 4px;
+    cursor: pointer;
+    list-style: none;
+}
+
+.menu summary::-webkit-details-marker {
+    display: none;
+}
+
+.menu summary span {
+    width: 20px;
+    height: 2px;
+    background: #222;
+}
+
+.menu nav {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    z-index: 2;
+    width: 190px;
+    padding: 10px;
+    border: 1px solid #a68a50;
+    border-radius: 6px;
+    background: #222b25;
+    color: #f1eee2;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.menu nav label {
+    display: block;
+    cursor: pointer;
+}
+
+.menu-home {
+    padding: 10px 12px;
+    border: 1px solid #c5a55a;
+    border-radius: 4px;
+    background: #80652e;
+    color: #fff8df;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.menu-home:hover {
+    background: #987c3d;
+}
+
+.menu-branch {
+    position: relative;
+    display: grid;
+    gap: 3px;
+    margin: 7px 0 0 18px;
+    padding: 5px 0 5px 17px;
+}
+
+.menu-branch::before {
+    position: absolute;
+    top: 0;
+    bottom: 18px;
+    left: 0;
+    border-left: 2px solid #a68a50;
+    content: "";
+}
+
+.menu-branch label {
+    position: relative;
+    padding: 8px 10px;
+    border-radius: 3px;
+}
+
+.menu-branch label::before {
+    position: absolute;
+    top: 50%;
+    left: -17px;
+    width: 13px;
+    border-top: 2px solid #a68a50;
+    content: "";
+}
+
+.menu-branch label:hover {
+    background: #354237;
+}
+
+main {
+    width: min(900px, calc(100% - 32px));
+    margin: 24px auto;
+}
+
+.page {
+    display: none;
+}
+
+#page-home:checked ~ .site .home-page,
+#page-roulette:checked ~ .site .roulette-page,
+#page-blackjack:checked ~ .site .blackjack-page,
+#page-poker:checked ~ .site .poker-page {
+    display: block;
+}
+
+.home-page > h1,
+.game-title {
     text-align: center;
 }
 
+.home-page > h1 {
+    margin: 0 0 20px;
+}
 
+.carousel {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #8d7849;
+}
 
-/* #93D786 bg color. */
+.slides {
+    display: flex;
+    width: 300%;
+    transition: transform 0.3s ease;
+}
+
+.slide {
+    position: relative;
+    width: 33.3333%;
+}
+
+.slide img {
+    display: block;
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+}
+
+.banner {
+    position: absolute;
+    right: 15%;
+    bottom: 40px;
+    left: 15%;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+    text-align: center;
+}
+
+.banner h2,
+.banner p {
+    margin: 0 0 8px;
+}
+
+.button,
+.blackjack-actions button {
+    display: inline-block;
+    padding: 9px 15px;
+    border: 0;
+    border-radius: 4px;
+    background: #80652e;
+    color: white;
+    cursor: pointer;
+    font: inherit;
+}
+
+.button:hover {
+    background: #987c3d;
+}
+
+.arrow {
+    position: absolute;
+    top: 45%;
+    padding: 0 12px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    cursor: pointer;
+    font-size: 38px;
+}
+
+.left {
+    left: 8px;
+}
+
+.right-arrow {
+    right: 8px;
+}
+
+.dots {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 8px;
+}
+
+.dots label {
+    width: 11px;
+    height: 11px;
+    border: 1px solid white;
+    border-radius: 50%;
+    background: #777;
+    cursor: pointer;
+}
+
+#slide-poker:checked ~ .slides {
+    transform: translateX(0);
+}
+
+#slide-roulette:checked ~ .slides {
+    transform: translateX(-33.3333%);
+}
+
+#slide-blackjack:checked ~ .slides {
+    transform: translateX(-66.6666%);
+}
+
+.game-title {
+    margin-bottom: 24px;
+}
+
+.game-title > p:last-child {
+    color: #c0c5b9;
+}
+
+.coming-soon {
+    display: inline-block;
+    margin: 0 0 10px;
+    padding: 5px 12px;
+    border: 1px solid #a68a50;
+    border-radius: 20px;
+    background: rgba(166, 138, 80, 0.16);
+    color: #e6cf91;
+    font-weight: bold;
+}
+
+.game-title h1,
+.poker-page h1 {
+    margin-bottom: 8px;
+}
+
+.roulette-board {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(38px, 1fr));
+    gap: 4px;
+    max-width: 520px;
+    margin: 24px auto;
+}
+
+.roulette-board span {
+    padding: 10px 4px;
+    border-radius: 3px;
+    color: white;
+    text-align: center;
+}
+
+.roulette-board .red,
+.red-card {
+    color: #bd3434;
+}
+
+.roulette-board .red {
+    background: #bd3434;
+    color: white;
+}
+
+.roulette-board .black {
+    background: #252925;
+}
+
+.roulette-board .green {
+    grid-column: 1 / -1;
+    background: #268148;
+}
+
+.game-note {
+    text-align: center;
+}
+
+.intro-text {
+    width: min(700px, 100%);
+    margin: 32px auto;
+    padding: 22px 26px;
+    border: 1px solid #8d7849;
+    border-radius: 8px;
+    background: rgba(36, 59, 45, 0.86);
+    color: #e8e8df;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.intro-text h2 {
+    margin: 0 0 12px;
+    color: #e6cf91;
+    font-size: 1.35rem;
+}
+
+.intro-text p {
+    margin: 0 0 12px;
+}
+
+.intro-text p:last-child {
+    margin-bottom: 0;
+}
+
+.blackjack-table {
+    display: grid;
+    gap: 18px;
+    width: min(760px, 100%);
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #8d7849;
+    border-radius: 8px;
+    background: #243b2d;
+}
+
+.hands {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.hand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 130px;
+    padding: 14px;
+    border-radius: 6px;
+    background: #31513c;
+}
+
+.hand h2 {
+    margin: 0 0 8px;
+    font-size: 18px;
+}
+
+.hand-total {
+    min-height: 18px;
+    margin: 0 0 8px;
+    font-size: 14px;
+}
+
+.player-hand {
+    justify-content: space-between;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.card {
+    display: grid;
+    width: 48px;
+    height: 66px;
+    place-items: center;
+    border-radius: 4px;
+    background: white;
+    color: #222;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.red-card {
+    color: #bd3434;
+}
+
+.card.hidden-card {
+    background: repeating-linear-gradient(45deg, #29452f, #29452f 6px, #527447 6px, #527447 12px);
+    color: white;
+}
+
+.bet-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.bet-controls input {
+    width: 90px;
+    padding: 9px;
+    border: 1px solid #a68a50;
+    border-radius: 4px;
+    font: inherit;
+}
+
+.blackjack-message {
+    min-height: 22px;
+    margin: 0;
+    text-align: center;
+}
+
+.action-button {
+    padding: 9px 15px;
+    border: 0;
+    border-radius: 4px;
+    background: #80652e;
+    color: white;
+    cursor: pointer;
+    font: inherit;
+}
+
+.blackjack-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 0;
+}
+
+.action-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+}
+
+.poker-page {
+    text-align: center;
+}
+
+.poker-page > img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.back-button {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 8px 12px;
+    border: 1px solid #a68a50;
+    border-radius: 4px;
+    background: #26332a;
+    color: #f1eee2;
+    font: inherit;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .top {
+        padding: 8px 12px;
+    }
+
+    .brand {
+        font-size: 19px;
+    }
+
+    .right {
+        gap: 8px;
+    }
+
+    .profile-credit {
+        gap: 6px;
+    }
+
+    .credit-button {
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    .profile-credit img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .slide img {
+        height: 300px;
+    }
+
+    .roulette-board {
+        grid-template-columns: repeat(4, minmax(38px, 1fr));
+    }
+
+    .blackjack-table {
+        padding: 12px;
+    }
+
+    .intro-text {
+        padding: 18px;
+        font-size: 0.96rem;
+    }
+
+    .hands {
+        grid-template-columns: 1fr;
+    }
+
+    .blackjack-actions {
+        flex-wrap: wrap;
+    }
+}
