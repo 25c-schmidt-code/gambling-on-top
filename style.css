@@ -9,8 +9,27 @@ background-color:#93D786
 h1
 {
     text-align: center;
+    font-family: "Isometra", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+p
+{
+    color:white; 
+    font-family: "Isometra", serif;
+    font-weight: 400;
+    font-style: normal; 
+}
+#idk
+{
+    background-image: url(p\ hatter.jpg);
+    border: 5px solid #9A4F2A;
+    width: 600px ;
 }
 
 
 
+
+
 /* #93D786 bg color. */
+/* #9A4F2A #div color */
