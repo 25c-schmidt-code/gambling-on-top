@@ -3,79 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css" >
+    <meta name="theme-color" content="#071b15">
+    <title>GoldenDice Casino</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>GoldenDice Casino</h1>
-<div class="container my-4">
-  <div class="row justify-content-center">
-    
-    <div class="col-md-8 col-lg-6"> 
+    <input class="page-choice" type="radio" name="page" id="page-home" checked>
+    <input class="page-choice" type="radio" name="page" id="page-roulette">
+    <input class="page-choice" type="radio" name="page" id="page-blackjack">
+    <input class="page-choice" type="radio" name="page" id="page-poker">
 
-      <div id="casinoCarousel" class="carousel slide" data-bs-ride="carousel">
-        
-        
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#casinoCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Poker"></button>
-          <button type="button" data-bs-target="#casinoCarousel" data-bs-slide-to="1" aria-label="Roulette"></button>
-          <button type="button" data-bs-target="#casinoCarousel" data-bs-slide-to="2" aria-label="Blackjack"></button>
-        </div>
-
-                <details class="menu">
-                    <summary aria-label="Játékok menü">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </summary>
-                    <nav aria-label="Játékok">
-                        <label class="menu-home" for="page-home">Főoldal</label>
-                        <div class="menu-branch">
-                            <label for="page-roulette">Rulett</label>
-                            <label for="page-blackjack">Blackjack</label>
-                            <label for="page-poker">Póker</label>
-                        </div>
-                    </nav>
-                </details>
+    <div class="site-shell">
+        <header class="site-header">
+            <label class="brand" for="page-home">
+                <span class="brand-mark" aria-hidden="true">G</span>
+                <span>Golden<span class="brand-accent">Dice</span></span>
+            </label>
+            <nav class="main-nav" aria-label="Játékok">
+                <label for="page-home">Főoldal</label>
+                <label for="page-roulette">Rulett</label>
+                <label for="page-blackjack">Blackjack</label>
+                <label for="page-poker">Póker</label>
+            </nav>
+            <div class="profile-credit">
+                <span>Kredit</span>
+                <strong>100</strong>
+                <button id="add-credits" type="button" aria-label="100 kredit hozzáadása">+100</button>
             </div>
         </header>
 
         <main>
             <section class="page home-page">
-                <h1>Válassz egy játékot!</h1>
+                <div class="welcome-copy">
+                    <p class="eyebrow">Üdvözlünk a GoldenDice Casinóban</p>
+                    <h1>Válassz egy játékot!</h1>
+                    <p>Próbáld ki a játékokat virtuális kreditekkel.</p>
+                </div>
 
-                <div class="carousel">
+                <div class="carousel" aria-label="Kiemelt játékok">
                     <input class="slide-choice" type="radio" name="slide" id="slide-poker" checked>
                     <input class="slide-choice" type="radio" name="slide" id="slide-roulette">
                     <input class="slide-choice" type="radio" name="slide" id="slide-blackjack">
 
                     <div class="slides">
-                        <article class="slide">
-                            <img src="extra/poker.jpg" alt="Pókerasztal">
+                        <article class="slide coming-soon-slide">
+                            <img src="extra/poker.jpg" alt="Pókerasztal zsetonokkal és kártyákkal">
                             <div class="banner">
                                 <h2>Póker</h2>
-                                <p>Készítés alatt</p>
-                                <label class="button" for="page-poker">Megnézem</label>
+                                <p>A pókerjáték készítés alatt áll.</p>
+                                <label class="button" for="page-poker">Részletek</label>
                             </div>
+                            <div class="coming-soon-overlay"><span>Készítés alatt</span></div>
                             <label class="arrow left" for="slide-blackjack" aria-label="Előző játék">‹</label>
                             <label class="arrow right-arrow" for="slide-roulette" aria-label="Következő játék">›</label>
                         </article>
-                        <article class="slide">
-                            <img src="extra/rulett.jpg" alt="Rulettkerék">
+                        <article class="slide coming-soon-slide">
+                            <img src="extra/rulett.jpg" alt="Rulettkerék a golyóval">
                             <div class="banner">
                                 <h2>Rulett</h2>
-                                <p>Hamarosan</p>
-                                <label class="button" for="page-roulette">Megnézem</label>
+                                <p>Hamarosan kipróbálhatod a rulettet.</p>
+                                <label class="button" for="page-roulette">Részletek</label>
                             </div>
+                            <div class="coming-soon-overlay"><span>Hamarosan</span></div>
                             <label class="arrow left" for="slide-poker" aria-label="Előző játék">‹</label>
                             <label class="arrow right-arrow" for="slide-blackjack" aria-label="Következő játék">›</label>
                         </article>
                         <article class="slide">
-                            <img src="extra/bj.jpg" alt="Blackjack">
+                            <img src="extra/bj.jpg" alt="Blackjack kártyák">
                             <div class="banner">
+                                <p class="eyebrow">Játssz most</p>
                                 <h2>Blackjack</h2>
-                                <p>Próbálj 21-et elérni!</p>
+                                <p>Próbálj minél közelebb kerülni a 21-hez!</p>
                                 <label class="button" for="page-blackjack">Játék indítása</label>
                             </div>
                             <label class="arrow left" for="slide-roulette" aria-label="Előző játék">‹</label>
@@ -83,7 +81,7 @@
                         </article>
                     </div>
 
-                    <div class="dots">
+                    <div class="dots" aria-label="Játék kiválasztása">
                         <label for="slide-poker" aria-label="Póker"></label>
                         <label for="slide-roulette" aria-label="Rulett"></label>
                         <label for="slide-blackjack" aria-label="Blackjack"></label>
@@ -92,43 +90,29 @@
             </section>
 
             <section class="page game-page roulette-page">
-                <label class="back-button" for="page-home">← Vissza a főoldalra</label>
-                <div class="game-title">
-                    <h1>Rulett</h1>
-                    <p class="coming-soon">Hamarosan</p>
-                    <p>A rulettkeréken 0-tól 36-ig vannak számok. A zöld mező a nulla, a többi piros vagy fekete.</p>
+                <div class="coming-soon-page roulette-coming-soon">
+                    <div class="coming-soon-copy">
+                        <p class="eyebrow">GoldenDice játékok</p>
+                        <h1>Rulett</h1>
+                        <p class="status-badge">Készítés alatt</p>
+                        <p>A rulett még nem játszható. Hamarosan visszatérünk vele!</p>
+                    </div>
                 </div>
-                <div class="roulette-board">
-                    <span class="green">0</span>
-                    <span class="red">1</span><span class="black">2</span><span class="red">3</span>
-                    <span class="black">4</span><span class="red">5</span><span class="black">6</span>
-                    <span class="red">7</span><span class="black">8</span><span class="red">9</span>
-                    <span class="black">10</span><span class="black">11</span><span class="red">12</span>
-                    <span class="black">13</span><span class="red">14</span><span class="black">15</span>
-                    <span class="red">16</span><span class="black">17</span><span class="red">18</span>
-                    <span class="red">19</span><span class="black">20</span><span class="red">21</span>
-                    <span class="black">22</span><span class="red">23</span><span class="black">24</span>
-                    <span class="red">25</span><span class="black">26</span><span class="red">27</span>
-                    <span class="black">28</span><span class="black">29</span><span class="red">30</span>
-                    <span class="black">31</span><span class="red">32</span><span class="black">33</span>
-                    <span class="red">34</span><span class="black">35</span><span class="red">36</span>
-                </div>
-                <p class="game-note">A rulett játékrész megjelenítése készül. Ez a változat még nem fogad tétet.</p>
             </section>
 
             <section class="page game-page blackjack-page">
-                <label class="back-button" for="page-home">← Vissza a főoldalra</label>
                 <div class="game-title">
+                    <p class="eyebrow">GoldenDice játékok</p>
                     <h1>Blackjack</h1>
-                    <p>Rakj tétet, majd húzz lapot, és próbálj minél közelebb kerülni a 21-hez!</p>
+                    <p>Rakj tétet, húzz lapot, és próbálj minél közelebb kerülni a 21-hez!</p>
                 </div>
 
                 <div class="blackjack-table">
                     <div class="hands">
                         <div class="hand dealer-hand">
-                            <img class="player-picture" src="extra/images (2).jpg" alt="Az osztó">
+                            <span class="dealer-avatar" aria-hidden="true">♠</span>
                             <div>
-                            <h2>Osztó</h2>
+                                <h2>Osztó</h2>
                                 <p class="hand-total" id="dealer-total"></p>
                                 <div class="cards" id="dealer-cards"></div>
                             </div>
@@ -158,17 +142,23 @@
             </section>
 
             <section class="page game-page poker-page">
-                <label class="back-button" for="page-home">← Vissza a főoldalra</label>
-                <img src="extra/poker.jpg" alt="Pókerasztal">
-                <h1>Póker</h1>
-                <p>Készítés alatt.</p>
+                <div class="coming-soon-page poker-coming-soon">
+                    <div class="coming-soon-copy">
+                        <p class="eyebrow">GoldenDice játékok</p>
+                        <h1>Póker</h1>
+                        <p class="status-badge">Készítés alatt</p>
+                        <p>A póker még nem játszható. Hamarosan visszatérünk vele!</p>
+                    </div>
+                </div>
             </section>
         </main>
+
+        <footer class="site-footer">
+            <span>GoldenDice Casino</span>
+            <span>A krediteknek nincs valódi pénzértékük.</span>
+        </footer>
     </div>
-  </div>
-</div>
-<div><img src="gif.gif"></div>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+
+    <script src="blackjack.js"></script>
 </body>
 </html>
