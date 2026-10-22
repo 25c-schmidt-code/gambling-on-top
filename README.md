@@ -1,22 +1,13 @@
-# GoldenDice Casino
+# 🎲 GoldenDice Casino (gambling-on-top)
 
-A GoldenDice Casino egy egyszerű, böngészőben futó dummy kaszinóprojekt. A játék krediteknek nincs valódi pénzértékük.
+A small casino-themed student project made of two parts:
 
-## Játékok
+1. **A landing page** for the fictional *GoldenDice Casino* 
+2. **A command-line Blackjack game** 
 
-- **Blackjack:** játszható blackjack tétbeállítással, lapkéréssel és megállással.
-- **Rulett:** hamarosan.
-- **Póker:** készítés alatt.
+> ⚠️ This is a learning project. It uses play-money chips only. No real gambling or payments are involved.
 
-A kreditek újratölthetők a fejlécben található **+100 kredit** gombbal.
+---
+## Disclaimer
 
-## Használat
-
-Nyisd meg az `index.html` fájlt egy böngészőben. A projekt GitHub Pages-en is közzétehető.
-
-## Fájlok
-
-- `index.html` – az oldal tartalma és a játékok felülete
-- `style.css` – az oldal megjelenése
-- `blackjack.js` – a blackjack
-- `extra/` – a képek
+For educational purposes only. Gambling can be addictive. If you or someone you know has a problem, please seek help.
